@@ -1,0 +1,21 @@
+
+name: Chemistry Game - Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o repositorio
+        uses: actions/checkout@v4
+
+      - name: Verificar arquivos
+        run: |
+          echo "Repositorio baixado com sucesso!"
+          echo "Arquivos encontrados:"
+          ls -la
